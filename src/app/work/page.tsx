@@ -9,12 +9,12 @@ import { Metadata } from "next"
 export default function WorkPage() {
   return (
     <main className="animate-fade-in-up">
-      <h1 className="text-4xl font-bold mb-8 text-white">
+      <h1 className="text-4xl font-bold mb-8 text-gray-900 dark:text-white">
         <span className="text-accent mr-2">*</span>
         <ScrambleText text="skills" /> {/* PAGE TITLE */}
       </h1>
 
-      <p className="text-gray-400 mb-12 leading-relaxed">
+      <p className="text-gray-600 dark:text-gray-400 mb-12 leading-relaxed">
         here are the technical skills and tools i work with.
       </p>
 

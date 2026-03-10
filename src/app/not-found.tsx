@@ -20,12 +20,12 @@ export default function NotFound() {
                                               
           `}
         </pre>
-        <p className="text-gray-400">
+        <p className="text-gray-600 dark:text-gray-400">
           looks like you&apos;ve wandered into uncharted territory
         </p>
         <Link
           href="/"
-          className="inline-block text-gray-400 hover:text-accent transition-colors"
+          className="inline-block text-gray-600 dark:text-gray-400 hover:text-accent transition-colors"
         >
           return home
         </Link>

@@ -74,8 +74,8 @@ export function Posts({ posts }: PostsProps) {
   return (
     <>
       {isSearching && (
-        <div className="fixed bottom-4 left-4 right-4 max-w-2xl mx-auto bg-black/50 backdrop-blur-sm border border-gray-800 p-2">
-          <div className="flex items-center text-gray-400">
+        <div className="fixed bottom-4 left-4 right-4 max-w-2xl mx-auto bg-white/90 dark:bg-black/50 backdrop-blur-sm border border-gray-300 dark:border-gray-800 p-2">
+          <div className="flex items-center text-gray-600 dark:text-gray-400">
             <span className="text-accent mr-2">/</span>
             <input
               type="text"
@@ -84,7 +84,7 @@ export function Posts({ posts }: PostsProps) {
                 setSearchQuery(e.target.value)
                 setSelectedIndex(0)
               }}
-              className="flex-1 bg-transparent outline-none"
+              className="flex-1 bg-transparent outline-none text-gray-900 dark:text-gray-100"
               autoFocus
               placeholder="search posts..."
               aria-label="Search posts"

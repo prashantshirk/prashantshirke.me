@@ -2,6 +2,7 @@ import type { Metadata } from "next"
 import { Geist_Mono } from "next/font/google"
 import "./globals.css"
 import { Navbar } from "../components/navbar"
+import { ThemeProvider } from "../components/theme-provider"
 import { Analytics } from "@vercel/analytics/next"
 import { SpeedInsights } from "@vercel/speed-insights/next"
 const geistMono = Geist_Mono({
@@ -50,14 +51,16 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body
         className={`${geistMono.variable} antialiased min-h-screen font-mono`}
       >
-        <div className="max-w-4xl mx-auto px-4 py-8">
-          <Navbar />
-          {children}
-        </div>
+        <ThemeProvider>
+          <div className="max-w-4xl mx-auto px-4 py-8">
+            <Navbar />
+            {children}
+          </div>
+        </ThemeProvider>
       </body>
       <Analytics />
       <SpeedInsights />
