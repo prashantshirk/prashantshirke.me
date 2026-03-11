@@ -1,0 +1,395 @@
+---
+title: "How to Use VS Code (From Beginner to Advanced)"
+description: "A practical guide to mastering Visual Studio Code — the world's most popular code editor — from your first install to advanced power-user workflows."
+date: "March 11, 2026"
+---
+
+If you want to write code efficiently, **VS Code is the editor most developers reach for first**. It's free, fast, and powerful enough to handle everything from a quick script to a full-scale application.
+
+When I first opened VS Code, it looked like any other text editor. But the more I used it, the more I realized it was a complete development environment packed into a lightweight tool.
+
+This post explains **how to actually learn VS Code step by step**, from installation and basic editing to advanced workflows professional developers use every day.
+
+---
+
+## What VS Code Actually Is
+
+VS Code is a **free, open-source code editor** built by Microsoft.
+
+It supports:
+
+- every major programming language
+- extensions for tools like Git, Docker, and databases
+- built-in terminal, debugger, and IntelliSense
+- themes and full UI customization
+
+Think of VS Code like a **Swiss Army knife for developers**. Out of the box it's useful. With the right configuration, it becomes your entire development environment.
+
+---
+
+## Installing VS Code
+
+Download VS Code from:
+
+https://code.visualstudio.com
+
+It is available for Windows, macOS, and Linux.
+
+After installation, verify it works by opening a folder:
+
+```
+File → Open Folder → Select your project
+```
+
+Or launch it from the terminal:
+
+```bash
+code .
+```
+
+This opens VS Code in the current directory.
+
+---
+
+## The VS Code Interface
+
+Before writing any code, learn the layout.
+
+```
+Activity Bar     = left sidebar icons (Explorer, Search, Git, Extensions)
+Side Bar         = panel that opens when you click an Activity Bar icon
+Editor           = center area where you write code
+Terminal         = bottom panel for running commands
+Status Bar       = bottom strip showing language, line number, Git branch
+```
+
+Most of your time is spent in the Editor and Terminal.
+
+---
+
+## Step 1: Open and Navigate Files
+
+Open the file explorer with:
+
+```
+Ctrl + Shift + E   (Windows/Linux)
+Cmd + Shift + E    (macOS)
+```
+
+Open any file instantly with:
+
+```
+Ctrl + P   (Windows/Linux)
+Cmd + P    (macOS)
+```
+
+Type part of the filename and press Enter. This is faster than clicking through folders.
+
+---
+
+## Step 2: Use the Built-In Terminal
+
+VS Code has a full terminal built in. Open it with:
+
+```
+Ctrl + `   (Windows/Linux)
+Cmd + `    (macOS)
+```
+
+You can run commands without ever leaving the editor:
+
+```bash
+node index.js
+python app.py
+npm install
+git push
+```
+
+You can open multiple terminal tabs side by side for different tasks.
+
+---
+
+## Step 3: Install Extensions
+
+Extensions are what make VS Code genuinely powerful.
+
+Open the Extensions panel:
+
+```
+Ctrl + Shift + X   (Windows/Linux)
+Cmd + Shift + X    (macOS)
+```
+
+Essential extensions every developer should install:
+
+```
+Prettier              → auto-formats your code
+ESLint                → catches JavaScript errors
+GitLens               → supercharges Git inside VS Code
+Live Server           → live browser preview for HTML/CSS
+Python                → Python language support
+Tailwind CSS IntelliSense → autocomplete for Tailwind classes
+```
+
+Install an extension in one click and it activates immediately.
+
+---
+
+## Step 4: Format Code Automatically
+
+Manual formatting wastes time. Let Prettier handle it.
+
+After installing Prettier, enable format on save:
+
+```
+Ctrl + Shift + P → "Open Settings (JSON)"
+```
+
+Add this to your settings file:
+
+```json
+{
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode"
+}
+```
+
+Now every time you save a file, your code is automatically formatted.
+
+---
+
+## Step 5: Master Essential Keyboard Shortcuts
+
+The fastest developers rarely touch the mouse.
+
+```
+Ctrl + S              → save file
+Ctrl + Z              → undo
+Ctrl + /              → toggle comment
+Ctrl + D              → select next occurrence of word
+Alt + Up/Down         → move line up or down
+Ctrl + Shift + K      → delete entire line
+Ctrl + B              → toggle side bar
+Ctrl + `              → open terminal
+Ctrl + P              → quick file open
+Ctrl + Shift + P      → command palette (run any action)
+```
+
+The **Command Palette** is the most important shortcut. It lets you run any VS Code command by typing its name.
+
+---
+
+## Step 6: Use Multi-Cursor Editing
+
+VS Code lets you edit multiple places at once.
+
+Add a cursor at the next matching word:
+
+```
+Ctrl + D
+```
+
+Add cursors to every line in a selection:
+
+```
+Ctrl + Shift + L
+```
+
+Add a cursor manually:
+
+```
+Alt + Click
+```
+
+This is incredibly useful for renaming variables, editing repeated patterns, or formatting lists.
+
+---
+
+## Step 7: Use the Built-In Git Integration
+
+VS Code has full Git support without any extensions.
+
+Open the Source Control panel:
+
+```
+Ctrl + Shift + G
+```
+
+From here you can:
+
+- see which files changed
+- stage files with one click
+- write commit messages
+- push and pull from GitHub
+
+A typical workflow directly in VS Code:
+
+```
+1. make changes in editor
+2. open Source Control panel
+3. stage changed files
+4. write commit message
+5. click the ✓ to commit
+6. click ... → Push
+```
+
+No terminal required for basic Git operations.
+
+---
+
+## Step 8: Debug Code Without console.log
+
+The built-in debugger lets you pause code and inspect variables in real time.
+
+Set a breakpoint by clicking the left margin of any line. A red dot appears.
+
+Then start the debugger:
+
+```
+F5
+```
+
+VS Code will pause execution at that line and show you:
+
+```
+Variables panel   → see every variable and its current value
+Call Stack        → see which functions are running
+Watch panel       → monitor specific expressions
+Debug Console     → run code mid-execution
+```
+
+This is far more powerful than guessing with `console.log`.
+
+---
+
+## Advanced: Customize Your Workspace Settings
+
+VS Code has two levels of settings:
+
+```
+User Settings     → apply to every project on your machine
+Workspace Settings → apply only to the current project (.vscode/settings.json)
+```
+
+Open settings:
+
+```
+Ctrl + Shift + P → "Open Settings (JSON)"
+```
+
+Useful settings to configure:
+
+```json
+{
+  "editor.fontSize": 15,
+  "editor.tabSize": 2,
+  "editor.wordWrap": "on",
+  "editor.minimap.enabled": false,
+  "terminal.integrated.fontSize": 14,
+  "workbench.colorTheme": "One Dark Pro"
+}
+```
+
+---
+
+## Advanced: Snippets
+
+Snippets let you type a short keyword and expand it into a full block of code.
+
+Create custom snippets:
+
+```
+Ctrl + Shift + P → "Configure User Snippets" → select language
+```
+
+Example — type `cl` and expand to `console.log()`:
+
+```json
+{
+  "Console Log": {
+    "prefix": "cl",
+    "body": ["console.log($1);"],
+    "description": "Log to console"
+  }
+}
+```
+
+Professional developers build entire libraries of snippets for patterns they type repeatedly.
+
+---
+
+## Advanced: Workspace and Multi-Root Projects
+
+For complex projects with multiple repositories, use a **multi-root workspace**.
+
+```
+File → Add Folder to Workspace
+```
+
+Save the workspace:
+
+```
+File → Save Workspace As → project.code-workspace
+```
+
+Now you can open your entire multi-repo project in one VS Code window, with separate Git tracking for each folder.
+
+---
+
+## A Simple Real Workflow
+
+Here is how a typical developer uses VS Code on a project.
+
+1. open terminal and start dev server
+2. edit code in the editor
+3. format on save with Prettier
+4. check errors in the Problems panel
+5. commit changes via Source Control panel
+6. push to GitHub
+
+```bash
+# Terminal inside VS Code
+npm run dev
+
+# Code auto-formats on save
+# Git panel shows changed files
+# Push with one click
+```
+
+---
+
+## Best Way to Actually Learn VS Code
+
+The best way to get faster in VS Code is **to build real projects inside it**.
+
+A few things that accelerate learning:
+
+- use keyboard shortcuts instead of the mouse, even when it feels slow
+- install extensions only as you need them
+- customize your settings gradually over time
+- watch what shortcuts experienced developers use in tutorials
+
+After a few weeks of daily use, your muscle memory takes over.
+
+---
+
+## Final Thoughts
+
+VS Code looks simple at first, but it rewards every hour you invest in learning it.
+
+Mastering VS Code will help you:
+
+- write and navigate code faster
+- catch bugs before they run
+- manage Git without leaving the editor
+- customize your environment to fit exactly how you work
+
+If you are serious about development, **VS Code is a tool worth learning deeply**.
+
+---
+
+If you're reading this, try this right now:
+
+```bash
+code .
+```
