@@ -34,7 +34,7 @@ const projects = [
       "integrated git-related workflows into a simple documentation interface",
     ],
     technologies: ["python", "html", "css"],                      // TECH STACK
-    href: "https://github.com/prashantshirk/docentry-git",
+    href: "https://github.com/prashantshirk/docentry",
   },
 ]
 
